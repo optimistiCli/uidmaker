@@ -10,10 +10,6 @@ run () {
 
     # TODO: Check bash version
 
-    # TODO: Check if username is valid
-
-    # TODO: Check base64 for -d or -D option
-
     CURDIR="$(pwd)"
 
     PKGNAME="uidmaker_${NEWUSER}"
@@ -24,7 +20,8 @@ run () {
 
     cd "$TEMPDIR"
 
-    base64 -d | tar xjf -
+    # Different versions of base64 might use -d or -D hence --decode
+    base64 --decode | tar xjf -
 
     find . -name '*.template' | while IFS='' read -d $'\n' T ; do
         T="$(realpath "$T")"
