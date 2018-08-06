@@ -1,7 +1,7 @@
 # System Internal User Maker for Synology DSM
 
 ## The Purpose of This Script
-When building a package for Synology DSM a developer has an option to specify a user name this package will run as. The user accounts ceated by those package fall into a special category dubbed System Internal Users or Package Users. They do not mingle withe the normal users in the DSM GUI and they are by default restricted from most services.
+When building a package for Synology DSM a developer has an option to specify a user name this package will run as. The user accounts ceated by those packageы fall into a special category dubbed “System Internal Users” or “Package Users”. They do not mingle withe the “normal” users in the DSM GUI and they are by default restricted from most services.
 
 I think it would be reasonable to use this System Internal Users for running services with Docker on DSM. Unfortunately there seems to be no simple way of creating those accounts. As a workaround I wrote this script that uses the minimal package from Synology DSM Developer Guide as a base to generate dummy packages. Each of these packages, when installed, creates a system internal user.
 
@@ -23,7 +23,7 @@ $ ls *.spk
 uidmaker_foobar.spk
 ```
 Now the package can be installed on DSM via GUI: 
-* Select Package Center  Manual Install
+* Select Package Center → Manual Install
 * Pick the newly genegated .spk file
 * Click through the menus
 
