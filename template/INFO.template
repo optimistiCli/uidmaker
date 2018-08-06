@@ -1,0 +1,9 @@
+package="%n"
+version="1.0.0000"
+maintainer="optimistiCli"
+arch="x86 bromolow cedarview avoton braswell broadwell dockerx64 kvmx64 grantley"
+description="Creates system internal user named %s and a group of the same name. The UID/GID will be chosen randomly in the 100000 ~ 300000 range. New user is created during the package installation. Hence this package should be uninstalled right after the installation succeeds. Note: once a user is created it may be quite tricky to remove it."
+displayname="UID Maker - %s"
+extractsize=128
+toolkit_version=15047
+create_time="%d"
