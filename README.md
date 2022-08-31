@@ -6,7 +6,7 @@ uidmaker.sh <username> [<groupname>]
 ```
 
 ## The Purpose of This Script
-When building a package for Synology DSM a developer has an option to specify a user and a group name this package will run as. The user accounts ceated by those packageы fall into a special category dubbed “System Internal Users” or “Package Users”. They do not mingle withe the “normal” users in the DSM GUI and they are by default restricted from most services.
+When building a package for Synology DSM a developer has an option to specify a user and a group name this package will run as. The user accounts ceated by those packages fall into a special category dubbed “System Internal Users” or “Package Users”. They do not mingle withe the “normal” users in the DSM GUI and they are by default restricted from most services.
 
 I think it would be reasonable to use this System Internal Users for running services with Docker on DSM. Unfortunately there seems to be no simple way of creating those accounts. As a workaround I wrote this script that uses the minimal package from Synology DSM Developer Guide as a base to generate dummy packages. Each of these packages, when installed, creates system internal user and group.
 
