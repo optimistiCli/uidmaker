@@ -2,8 +2,8 @@
 	"defaults":{
 		"run-as": "package"
 	},
-	"username": "%s",
-	"groupname": "%s",
+	"username": "%u",
+	"groupname": "%g",
 	"ctrl-script": [{
 		"action": "postinst",
 		"run-as": "root"
