@@ -1,5 +1,11 @@
 # System Internal User Maker for Synology DSM
 
+### DSM 7 Hack
+Updated to *almost* work on DSM 7. Try installing via CLI – the installation will fail but user and group get added
+```bash
+sudo synopkg install uidmaker_<whatever>.spk
+```
+
 ## Usage
 ```bash
 uidmaker.sh <username> [<groupname>]
