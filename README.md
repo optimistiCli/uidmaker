@@ -1,10 +1,17 @@
 # System Internal User Maker for Synology DSM
 
 ## DSM 7
-DSM 7 is **not** supported, but there is a workaround that *almost* works on DSM 7. Try installing via CLI – the installation will fail but user and group get added:
+DSM 7 is **not** supported, but there is a workaround that *almost* works on DSM 7. Try installing via CLI – the installation will fail but user and group get added. Here's the how you can use it:
 ```bash
-sudo synopkg install uidmaker_<whatever>.spk
-sudo synogroup --memberadd <created group name> <real user name>
+# Creating group named 'foobar'
+./uidmaker.sh foobar
+# This should have cooked DSM package uidmaker_foobar.spk
+# Try installing it now
+sudo synopkg install uidmaker_foobar.spk
+# Installation fails but user and group both named 'foobar' do get created
+# Add real-life user 'bizwiz' to 'foobar' group
+sudo synogroup --memberadd foobar bizwiz
+# Exit this shell session and login anew for the changes to take effect
 ```
 
 ## Usage
